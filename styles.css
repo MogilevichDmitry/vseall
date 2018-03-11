@@ -16,6 +16,7 @@ header {
 
 body {
   font-family: 'Play', sans-serif;
+  font-size: 1em;
 }
 
 .logo {
@@ -41,6 +42,11 @@ body {
   color: white;
   text-transform: uppercase;
   padding: 5px;
+  transition: color .3s ease;
+}
+
+.menu a:hover, .menu a.active {
+  color: orange;
 }
 
 .menu li {
@@ -72,12 +78,15 @@ body {
   flex-direction: column;
   position: absolute;
   padding-top: 67px;
+  text-align: center;
   top: 0;
   right: 0;
   left: 0;
   bottom: 0;
   background: rgba(0 ,0 , 0, 0.3);
   color: white;
+  padding-left: 130px;
+  padding-right: 130px;
 }
 
 .welcome-overlay h2 {
@@ -87,18 +96,17 @@ body {
 .phones {
   margin-top: 30px;
   margin-left: auto;
-  margin-right: 130px;
 }
 
 .services {
   display: flex;
   flex-direction: column;
-  padding: 40px 110px 60px;
+  padding: 40px 110px 40px;
 }
 
 h3 {
   display: inline-flex;
-  font-size: 28px;
+  font-size: 1.75em;
   flex-direction: column;
   margin: 0 auto 20px;
 }
@@ -117,54 +125,57 @@ h3:after {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-top: 40px;
 }
 
 .services li {
-  width: 29%;
+  width: calc(29% - 30px);
   margin: 15px;
+  margin-bottom: 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   text-align: center;
+  font-size: 1.188em;
 }
 
 .services__img {
   display: flex;
   align-items: center;
   height: 80px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .bigbox {
-  width: 55px;
-  height: 55px;
+  width: calc(55px * 1.3);
+  height: calc(55px * 1.3);;
 }
 
 .cargo {
-  width: 60px;
-  height: 60px;
+  width: calc(60px * 1.3);
+  height: calc(60px * 1.3);
 }
 
 .wagon {
-  width: 70px;
-  height: 70px;
+  width: calc(70px * 1.3);
+  height: calc(70px * 1.3);
 }
 
 .water {
-  width: 60px;
-  height: 60px;
+  width: calc(60px * 1.3);
+  height: calc(60px * 1.3);
 }
 
 .conditioner {
-  width: 65px;
-  height: 65px;
+  width: calc(65px * 1.3);
+  height: calc(65px * 1.3);
   fill-opacity: 0.7;
 }
 
 .document {
-  width: 60px;
-  height: 60px;
+  width: calc(60px * 1.3);
+  height: calc(60px * 1.3);
   fill-opacity: 0.8;
 }
 
@@ -179,16 +190,19 @@ h3:after {
 .info {
   display: flex;
   list-style: none;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .contacts li {
-  font-size: 17px;
+  font-size: 1.063em;
   margin: 15px;
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
-  width: 25%;
+  width: calc(25% - 30px);
+  min-width: 200px;
 }
 
 .phone-svg {
@@ -224,12 +238,12 @@ h3:after {
 
 .info__value {
   line-height: 1.3;
-  font-size: 21px;
+  font-size: 1.313em;
   letter-spacing: 0.3px;
 }
 
 .copyright {
-  font-size: 15px;
+  font-size: 0.938em;
   margin-top: 20px;
 }
 
@@ -248,4 +262,65 @@ h3:after {
 
 h4 {
   margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 0.95em;
+  }
+  .contacts {
+    padding: 30px;
+  }
+  .about {
+    padding: 30px 60px;
+  }
+  .services {
+    padding: 30px;
+  }
+  .services li {
+    width: calc(50% - 30px);
+  }
+  .welcome-overlay {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  header {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+/* temp media */
+@media (max-width: 1024px) {
+  .menu {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    font-size: 0.9em;
+  }
+  .about p, .about ul {
+    font-size: 1.1em;
+  }
+  .contacts {
+    padding: 15px;
+  }
+  .about {
+    padding: 15px 30px;
+  }
+  .services {
+    padding: 15px;
+  }
+  .services li {
+    width: calc(100% - 30px);
+  }
+  .welcome-overlay {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  header {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
